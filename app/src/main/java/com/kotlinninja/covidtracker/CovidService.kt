@@ -9,6 +9,6 @@ interface CovidService {
 fun getNationalData():Call<List<CovidData>>
 
 
-    @GET("states/daily.json")
+    @GET("states/daily.json") //Annotation is used to attach metadata to our code
     fun getStatesData():Call<List<CovidData>>
 }

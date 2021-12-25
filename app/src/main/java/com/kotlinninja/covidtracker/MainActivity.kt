@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
+// convert data string and turn into a java object
         val gson = GsonBuilder().setDateFormat("yyyy-MM-dd'T'HH:mm:ss").create()
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             .build()
         val covidService = retrofit.create(CovidService::class.java)
 
+        // Fetch the national data
         covidService.getNationalData().enqueue(object: Callback<List<CovidData>> {
             override fun onFailure(call: Call<List<CovidData>>, t: Throwable) {
                 Log.e(TAG, "onFailure $t")
