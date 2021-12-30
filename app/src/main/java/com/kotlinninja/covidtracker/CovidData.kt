@@ -5,7 +5,8 @@ import java.util.*
 
 data class CovidData(
 
-     val positiveIncrease: Date,
+     val date: Date,
+     val positiveIncrease: Int,
      val dataChecked:Int,
      val negativeIncrease:Int,
      val deathIncrease:Int,

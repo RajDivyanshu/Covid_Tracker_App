@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
                 nationalDailyData = nationalData.reversed()
                 // TODO: Update graph with national data
-                Log.i(TAG, "TODO: Update graph with national data")
+                Log.i(TAG, "TODO: Update graph with national data ${nationalData}")
             }
         })
 
